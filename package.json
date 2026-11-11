@@ -1,0 +1,25 @@
+{
+  "name": "notepad",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "GitHub OAuth 로그인을 지원하는 Cloudflare Workers 메모장",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm run test",
+    "db:migrate:local": "wrangler d1 migrations apply notepad-db --local",
+    "db:migrate:remote": "wrangler d1 migrations apply notepad-db --remote"
+  },
+  "dependencies": {
+    "hono": "^4.13.17"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261110.1",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.0",
+    "wrangler": "^4.160.0"
+  }
+}

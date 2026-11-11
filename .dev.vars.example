@@ -1,0 +1,15 @@
+# `wrangler dev`에서만 읽는 로컬 환경 변수입니다.
+# 이 파일을 .dev.vars 로 복사한 뒤 값을 채우세요. (.dev.vars 는 git에 커밋되지 않습니다)
+
+# GitHub OAuth App 설정
+# https://github.com/settings/developers → New OAuth App
+# Homepage URL: http://localhost:8787
+# Authorization callback URL: http://localhost:8787/auth/callback
+GITHUB_CLIENT_ID=your_client_id
+GITHUB_CLIENT_SECRET=your_client_secret
+
+# 선택: 콜백 URL을 명시적으로 고정할 때 사용합니다.
+# GITHUB_REDIRECT_URI=http://localhost:8787/auth/callback
+
+# 로컬 개발용 로그인 (localhost 에서만 동작, 운영 배포 시 절대 true 로 두지 마세요)
+DEV_LOGIN=true
